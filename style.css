@@ -71,7 +71,6 @@ header>img {
     box-shadow: 1px 1px 25px #92DDC6;
     top: -560px;
     left: 38%;
-
 }
 
 .desc{
@@ -95,6 +94,7 @@ header>img {
     box-shadow: 0 0 10px white, 0 0 10px white;
     border-radius: 2px;
 }
+
 .githubImg{
     position: absolute;
     top: -280px;
@@ -102,7 +102,6 @@ header>img {
     width: 40px;
     height: 40px ;
     cursor: pointer;
-
 }
 
 .telegramImg{
@@ -121,7 +120,6 @@ header>img {
     width: 40px;
     height: 40px;
     cursor: pointer;
-
 }
 
 .linkedInImg{
@@ -132,6 +130,7 @@ header>img {
     height: 40px;
     cursor: pointer;
 }
+
 .contactImg{
     position: absolute;
     top: -280px;
@@ -139,8 +138,8 @@ header>img {
     width: 40px;
     height: 40px;
     cursor: pointer;
-
 }
+
 .gmailImg{
     position: absolute;
     top: -280px;
@@ -149,6 +148,7 @@ header>img {
     height: 40px;
     cursor: pointer;
 }
+
 .instagramImg{
     position: absolute;
     top: -280px;
@@ -168,8 +168,8 @@ header>img {
     top: -500px;
     left: 70%;
     letter-spacing:1px;
-
 }
+
 .me2{
     position: absolute;
     left: 80px;
@@ -196,12 +196,97 @@ header>img {
     top: -350px;
     left: 75%;
 }
-.icon{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
 
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* ===== APPLY ANIMATIONS ===== */
+
+/* Description text */
+.desc {
+    animation: slideUp 1s ease forwards;
+}
+
+/* First line */
+.homeLine1 {
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Social icons (appear one by one) */
+.githubImg,
+.telegramImg,
+.whatsappImg,
+.linkedInImg,
+.contactImg,
+.gmailImg,
+.instagramImg {
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.githubImg { animation-delay: 0.4s; }
+.telegramImg { animation-delay: 0.5s; }
+.whatsappImg { animation-delay: 0.6s; }
+.linkedInImg { animation-delay: 0.7s; }
+.contactImg { animation-delay: 0.8s; }
+.gmailImg { animation-delay: 0.9s; }
+.instagramImg { animation-delay: 1s; }
+
+/* Profile image */
+.homeImage {
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+/* Name text */
+.me {
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+/* Second line */
+.homeLine2 {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+}
+
+/* Vision text */
+.vision {
+    animation: slideUp 1s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+/*.icon{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    border-radius: 50%;*/
+
+/*}*/
+
         /* BACKGROUND TEXT */
 .background-text {
     position: absolute; /* <-- changed from fixed to absolute */
