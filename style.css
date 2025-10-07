@@ -54,14 +54,34 @@ nav ul li a {
 }
 
 /*header image*/
-header>img {
+header > img {
     position: absolute;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     left: 95%;
     top: 20px;
+
+    opacity: 0;
+    transform: rotate(-360deg) scale(0);
+    animation: rotatePop 1s forwards;
+    animation-delay: 1.5s;
 }
+
+@keyframes rotatePop {
+    0% {
+        opacity: 0;
+        transform: rotate(-360deg) scale(0);
+    }
+    70% {
+        transform: rotate(20deg) scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
 /*============================home==========================*/
 .homeImage{
     position: absolute;
@@ -280,14 +300,55 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
-/*.icon{*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    border-radius: 50%;*/
 
-/*}*/
+            /*scroll */
+.scroll-indicator {
+    position: absolute;
+    text-align: center;
+    color: #555;
+    top: -180px;
+    left: 85%;
+}
 
-        /* BACKGROUND TEXT */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px lime, 0 0 10px lime;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 10px lime, 0 0 10px lime;
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 30%;
+    box-shadow: 1px 1px 8px lime, 1px 1px 8px lime;
+    background-color: black;
+    top: 20px;
+    left: 75%;
+    animation: pulse 1.5s infinite;
+}
+
+
+.arrow {
+    position: absolute;
+    border-bottom: 8px solid #555;
+    border-right: 8px solid #555;
+    transform: rotate(45deg);
+    margin: 0 auto 10px;
+    width: 23px;
+    height: 23px;
+    top: 20px;
+    left: 23px;
+    animation-delay: 0.2s;
+}
+
+
+         /*BACKGROUND TEXT*/
 .background-text {
     position: absolute; /* <-- changed from fixed to absolute */
     top: 800px;
