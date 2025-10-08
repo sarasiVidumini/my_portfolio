@@ -597,3 +597,152 @@ div>button:nth-child(3)>span{
 
 
 }
+
+/* CSS */
+.footer {
+    position: absolute;
+    background-color: #111; /* Dark background */
+    color: #fff;            /* White text */
+    /*text-align: center;*/
+    padding: 150px 0;
+    width: 2000px;
+    height: 100px;
+    left: 0;
+}
+.footerDesc{
+    position: absolute;
+    width: 600px;
+    height: 26px;
+    color: grey;
+    font-size: 18px;
+    margin-top: -130px;
+    left: 30%;
+}
+.footer .social-icons {
+    position: absolute;
+    top: 60%;
+    left: 33%;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.footer .social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.footer p {
+    position: absolute;
+    left: 33%;
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    top: 90%;
+}
+
+.footerAddress{
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 20px;
+    color: white;
+    width: 200px;
+    height: 26px;
+    font-size: 16px;
+}
+
+.footerLogo{
+    position: absolute;
+    color: darkcyan;
+    margin-top: -18px;
+    left: 20px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 4px #92DDC6;
+    display: flex;
+}
+
+.footerCom{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -80px;
+    left: 37%;
+    color: white;
+    font-size: 18px;
+}
+
+.footerNumber{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    left: 36.5%;
+    color: white;
+    font-size: 18px;
+}
+
+.footerMail{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+    left: 34%;
+    color: navy;
+    font-size: 20px;
+}
+
+.footerRight{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    margin-top: -80px;
+    left: 70%;
+    color: white;
+    font-size: 20px;
+    word-spacing: 5px;
+}
+
+.footerRight>strong>span:first-child:hover{
+    cursor: pointer;
+    color: purple;
+}
+.footerRight>strong>span:nth-child(2):hover{
+    cursor: pointer;
+    color: purple;
+}
+.footerRight>strong>span:nth-child(3):hover{
+    cursor: pointer;
+    color: purple;
+}
+.footerRight>strong>span:nth-child(4):hover{
+    cursor: pointer;
+    color: purple;
+}
+.footerRight>strong>span:last-child:hover{
+    cursor: pointer;
+    color: purple;
+}
+
+.footerLine{
+    position: absolute;
+    width: 74%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top: 33px;
+    left: 20px;
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    border-radius: 2px;
+}
+
+
+
