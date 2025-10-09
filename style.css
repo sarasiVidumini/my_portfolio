@@ -17,33 +17,33 @@ header > h1 {
     position: absolute;
     color: darkcyan;
     top: 10px;
-    left: 30px;
+    left: 10px;
     font-size: 50px;
     letter-spacing: 1px;
     text-shadow: 4px 4px 4px #92DDC6;
     display: flex;
 }
-
+/* Base Nav */
 nav {
     padding: 10px 0;
     position: relative;
-    /*display: flex;*/
 }
 
 nav ul {
     position: absolute;
     list-style: none;
-    /*display: flex;*/
     justify-content: center;
     margin: 0;
     padding: 0;
-    left: 25%;
+    left: 18%;
     top: -80px;
-    word-spacing: 50px;
+    word-spacing: 40px;
 }
 
 nav ul li {
-    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -51,7 +51,294 @@ nav ul li a {
     text-decoration: none;
     font-size: 32px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+nav ul li a:hover {
+    color: #92DDC6;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+/*==================================dropdown home============================*/
+.dropdown-menu-home {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 0 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 300px;
+}
+
+
+.dropdown-menu-home li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-home li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 30px 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-container:hover .dropdown-menu-home {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*==================================Dropdown skills =================================*/
+.dropdown-menu-skills {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 5px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 180px;
+}
+
+
+
+/* Dropdown skills list */
+.dropdown-menu-skills li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-skills li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-container:hover .dropdown-menu-skills {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*==================================dropdown about==========================*/
+.dropdown-menu-about{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 265px;
+}
+
+.dropdown-menu-about li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-about li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 0 40px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Show animation on hover */
+.dropdown-container:hover .dropdown-menu-about {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*======================dropdown services==================*/
+.dropdown-menu-services{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 3px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 200px;
+}
+
+.dropdown-menu-services li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-services li a {
+    color: #0D7377;
+    font-size: 18px;
+    font-weight: normal;
+    display: block;
+    padding: 6px 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+/*=======Show animation on hover====== */
+.dropdown-container:hover .dropdown-menu-services {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*================================dropdown Projects=========================*/
+.dropdown-menu-projects {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 5px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 210px;
+}
+
+
+.dropdown-menu-projects li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-projects li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-container:hover .dropdown-menu-projects {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*===============================dropdown gallery==========================*/
+.dropdown-menu-gallery {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 0 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 240px;
+}
+
+
+.dropdown-menu-gallery li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-gallery li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 30px 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-container:hover .dropdown-menu-gallery {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ /*=========================dropdown contactMe=======================*/
+.dropdown-menu-contactMe {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 20px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #92DDC6;
+    z-index: 99;
+    min-width: 200px;
+}
+
+.dropdown-menu-contactMe li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-menu-contactMe li a {
+    color: #0D7377;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-container:hover .dropdown-menu-contactMe {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*======================================================HEADER=======================================================================*/
 
 /*header image*/
 header > img {
@@ -82,14 +369,14 @@ header > img {
     }
 }
 
-/*============================home==========================*/
+/*==============================================================HOME===============================================================*/
 .homeImage{
     position: absolute;
     width: 375px;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 1px 1px 25px #92DDC6;
-    top: -560px;
+    box-shadow: 0 0 10px #92DDC6;
+    top: -550px;
     left: 38%;
 }
 
@@ -233,7 +520,6 @@ header > img {
     100% { opacity: 1; transform: scale(1); }
 }
 
-/* ===== APPLY ANIMATIONS ===== */
 
 /* Description text */
 .desc {
@@ -376,7 +662,7 @@ section {
     position: relative;
 }
 
-/*================hero section======================*/
+/*=========================================================ABOUT==============================================================*/
 
 #about {
     position: relative;
@@ -584,7 +870,7 @@ div>button:nth-child(3)>span{
     color: #0B1215;
 }
 
-/*==========================skills section==================================*/
+/*=================================================================SKILLS================================================================*/
 #skills{
     position: relative;
     opacity: 100%;
@@ -651,7 +937,7 @@ div>button:nth-child(3)>span{
     /*background: linear-gradient(to right, #92DDC6, #0D7377);*/
     box-shadow: 0 0 30px #92DDC6, 0 0 30px #0D7377;
 }
-.softSkills{
+#softSkills{
     width: 437px;
     height: 96px;
     left: 30%;
@@ -745,7 +1031,7 @@ div>button:nth-child(3)>span{
     box-shadow: 0 0 30px #92DDC6, 0 0 30px #0D7377;
 }
 
-.techSkills{
+#techSkills{
     width: 437px;
     height: 96px;
     left: 25%;
@@ -827,7 +1113,7 @@ div>button:nth-child(3)>span{
     height: 70px;
     opacity: 100%;
 }
-/* CSS */
+/*==========================================================FOOTER======================================================*/
 .footer {
     position: absolute;
     background-color: #111; /* Dark background */

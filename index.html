@@ -24,17 +24,74 @@
         <h1>@SARAZ</h1>
         <nav>
             <ul>
-                <li>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#service">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#contactMe">ContactMe</a>
+                <li class="dropdown">
+                    <div class="dropdown-container">
+                        <a href="#home" class="dropdown-link">Home▾</a>
+                        <ul class="dropdown-menu-home">
+                            <li><a>🙎‍♀️Welcome-to-My-Word...!</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#about" class="dropdown-link">About▾</a>
+                        <ul class="dropdown-menu-about">
+                            <li>
+                                <a href="#about">
+                                    👋Sarasi-Vidumini
+                                    👩‍💻Software-Developer
+                                    👩‍🎓IJSE
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown for Skills -->
+                    <div class="dropdown-container">
+                        <a href="#skills" class="dropdown-link">Skills▾</a>
+                        <ul class="dropdown-menu-skills">
+                            <li><a href="#softSkills">🙋‍♀️Soft-Skills</a></li>
+                            <li><a href="#techSkills">💻Technical-Skills</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <a href="#service" class="dropdown-link">Service▾</a>
+                        <ul class="dropdown-menu-services">
+                            <li>
+                                <a href="#service">
+                                    🚀Website-Creation
+                                    🖥️App-Developing
+                                    👌UI/UX-Designing
+                                    🧐Problem-Solving
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#projects" class="dropdown-link">Projects▾</a>
+                        <ul class="dropdown-menu-projects">
+                            <li><a href="#myProject">👩‍🏫My-Projects</a></li>
+                            <li><a href="#myAssignment">📑My-Assignment</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#gallery" class="dropdown-link">Gallery▾</a>
+                        <ul class="dropdown-menu-gallery">
+                            <li><a href="#gallery">🎞️My-Gallery-Is-Here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-container">
+                        <a href="#contactMe" class="dropdown-link">ContactMe▾</a>
+                        <ul class="dropdown-menu-contactMe">
+                            <li>
+                                <a href="tel:+94771754098">📞(94)771754098</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </nav>
+
         <img src="images/cropped_circle_image1.png">
     </header>
 </section>
@@ -126,13 +183,13 @@
 
 
 <section id="skills">
-    <p class="skillMainPara">What <strong class="strongS">Do</strong> I Have?</p>
+    <p class="skillMainPara">What Do I <strong class="strongS">Have </strong>?</p>
     <hr class="skillLine">
     <div class="circleHead">
         <p class="mySkills">My Skills</p>
     </div>
     <div class="square1">
-        <p class="softSkills">Soft Skills</p>
+        <p id="softSkills">Soft Skills</p>
         <div class="orderBySkills">
             <span class="s1">Leadership</span>
             <span class="s2">Time-Management</span>
@@ -144,7 +201,7 @@
     </div>
 
     <div class="square2">
-        <p class="techSkills">Technical Skills</p>
+        <p id="techSkills">Technical Skills</p>
         <div class="imagesTechPro">
             <img src="images/programsIcon/cssImage.png" class="css">
             <img src="images/programsIcon/fxImage.jpg" class="fx">
