@@ -1,0 +1,301 @@
+/* ======================================== */
+/* iPad Air (portrait) 820x1180 media query */
+/* ======================================== */
+@media only screen and (min-width: 820px) and (max-width: 1180px) {
+
+    body {
+        margin-left: 10px;
+    }
+
+    /* Header */
+    header > h1 {
+        font-size: 36px;
+        top: 20px;
+        left: 10px;
+    }
+
+    header > img {
+        width: 70px;
+        height: 70px;
+        left: 1110px;
+        top: 20px;
+    }
+
+    /* Navigation */
+    nav ul {
+        left: 17%;
+        top: -68px;
+        word-spacing: 23.5px;
+    }
+
+    nav ul li {
+        left: 10%;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+        left: 11%;
+    }
+
+    /* Home Section */
+    .homeImage {
+        width: 300px;
+        height: 400px;
+        top: -1217px;
+        left: 50%;
+    }
+
+    .desc {
+        font-size: 24px;
+        width: 350px;
+        top: -1080px;
+        left: 55px;
+    }
+
+    .homeLine1 {
+        width: 20%;
+        top: -1000px;
+        left: 55px;
+    }
+
+    .githubImg,
+    .telegramImg,
+    .whatsappImg,
+    .linkedInImg,
+    .contactImg,
+    .gmailImg,
+    .instagramImg {
+        width: 30px;
+        height: 30px;
+        top: -970px;
+    }
+
+    .githubImg { left: 50px; }
+    .telegramImg { left: 90px; }
+    .whatsappImg { left: 130px; }
+    .linkedInImg { left: 170px; }
+    .contactImg { left: 210px; }
+    .gmailImg { left: 250px; }
+    .instagramImg { left: 290px; }
+
+    .me {
+        font-size: 36px;
+        top: -1150px;
+        left: 90%;
+    }
+
+    .homeLine2 {
+        width: 18%;
+        top: -1050px;
+        left: 95%;
+    }
+
+    .vision {
+        font-size: 20px;
+        top: -1030px;
+        left: 95%;
+        font-weight: bold;
+    }
+
+    .scroll-indicator{
+        position: absolute;
+        top: -920px;
+        left: 100%;
+    }
+
+    /* About Section */
+    #about {
+        font-size: 28px;
+        top: -2000px;
+    }
+
+    #about>p:first-child{
+        position: absolute;
+        font-size: 30px;
+        width: 300px;
+        left: 95%;
+
+    }
+    #about>p:nth-child(2){
+        font-size: 40px;
+        width: 450px;
+        left: 5%;
+    }
+    #about>p:nth-child(3) {
+        font-size: 30px;
+        width: 500px;
+        left: 10%;
+    }
+
+    #about>p>span{
+        max-width: 800px;
+        left: 10%;
+        font-size: 27px;
+    }
+
+    .firstPhoto {
+        width: 300px;
+        height: 400px;
+        top: 5%;
+        left: 90%;
+    }
+
+    .btn-container {
+        top: 400px;
+        left: 30%;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 180px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+
+    .myCV{
+       top: 230px;
+    }
+
+    /* Skills Section */
+    #skills {
+        font-size: 28px;
+        top: -2550px;
+    }
+
+    .skillMainPara {
+        font-size: 48px;
+        width: 350px;
+        left: 45%;
+    }
+
+    .skillLine{
+        top: 10%;
+        width: 15%;
+        left: 50%;
+    }
+
+    .circleHead {
+        width: 250px;
+        height: 250px;
+        top: 25%;
+        left: 49%;
+    }
+
+    .mySkills{
+        font-size: 65px;
+    }
+
+    .square1 {
+
+        width: 400px;
+        height: 500px;
+        top: 15%;
+        left: 4%;
+
+    }
+    .square2 {
+
+        width: 400px;
+        height: 500px;
+        top: 15%;
+        left: 80%;
+    }
+
+    .s1{
+        left: 23%;
+        top: 35%;
+    }
+
+    .s2{
+        left: 15%;
+        top: 45%;
+    }
+    .s3{
+        left: 18%;
+        top: 55%;
+    }
+    .s4{
+        left: 22%;
+        top: 65%;
+    }
+    .s5{
+        left: 22%;
+        top: 75%;
+    }
+    .s6{
+        left: 19%;
+        top: 85%;
+    }
+
+
+    #softSkills, #techSkills {
+        font-size: 28px;
+        width: 350px;
+    }
+
+    /* Footer */
+    .footer {
+        width: 1238px;
+        padding: 100px 10px;
+        height: 300px;
+    }
+
+    .footerDesc {
+        font-size: 30px;
+        width: 800px;
+        left: 20%;
+        top: 50%;
+    }
+
+    .footerLogo {
+        font-size: 36px;
+        left: 20px;
+        top: 55%;
+    }
+
+    .footer .social-icons {
+        top: 73%;
+        left: 40%;
+    }
+
+    .footerRight {
+        font-size: 16px;
+        top: 50%;
+        left: 95%;
+    }
+
+    .footerLine{
+        width:97% ;
+        top: 63%;
+
+    }
+
+    .footer p {
+        left: 40%;
+    }
+
+    .footerMail{
+        top:53% ;
+        left: 41.5%;
+        font-size: 24px;
+    }
+
+    .footerNumber{
+        left: 45%;
+        font-size: 24px;
+        top: 53%;
+    }
+
+    .footerCom{
+        font-size: 30px;
+        width: 200px;
+        left: 45%;
+        top: 48%;
+    }
+
+    .footerAddress{
+        left: 10px;
+        top: 60%;
+    }
+}
