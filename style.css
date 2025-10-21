@@ -1476,7 +1476,7 @@ div>button:nth-child(3)>span{
     color: white;
     /*-560px*/
     /*left: 50px;*/
-    top: -200px;
+    top: -100px;
 
 }
 
@@ -1604,6 +1604,304 @@ b{
     color: rgba(220, 91, 183, 1);
 }
 
+/*PROJECTS*/
+#projects{
+    position: relative;
+    opacity: 100%;
+    font-size: 40px;
+    color: white;
+    /*-560px*/
+    /*left: 50px;*/
+    top: 80px;
+}
+.projectMainPara{
+    position: absolute;
+    top: 10px;
+    font-size: 42px;
+    color: white;
+    left: 40%;
+}
+strong{
+    color: #0D7377;
+}
+.myProjectLine{
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    background-color: yellow;
+    border: none;
+    top: 100px;
+    left:80px;
+    border-radius: 2px;
+    animation: float 3s ease-in-out infinite;
+}
+#myProjects{
+position: absolute;
+    color: #00e7ff;
+    top: 80px;
+    left: 130px;
+    animation: float 3s ease-in-out infinite;
+}
+.projectLine{
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: red;
+    border: none;
+    top: 70px;
+    left: 500px;
+    box-shadow: 0 0 10px red, 0 0 20px red;
+    border-radius: 2px;
+}
+.containerProjects {
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    width: 90%;
+    position: absolute;
+    top: 150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.cardNew {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 250px;
+    height: 280px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.containerProjects:hover > :not(:hover) {
+    opacity: 0.2;
+}
+
+.title {
+    width: 100%;
+    display: inline-block;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 1rem auto;
+    color: grey;
+}
+
+.title:first-child{
+    font-size: 22px;
+    position: relative;
+    top: -30px;
+}
+.title:nth-child(2){
+    font-size: 22px;
+    position: relative;
+    top: -30px;
+}
+.p0{
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    border-radius: 20%;
+    opacity: 45%;
+}
+.p0:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.p0Desc{
+    position: absolute;
+    top: 190px;
+    width: 200px;
+    height: 20px;
+    font-size: 13px;
+    color: snow;
+}
+.p1{
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    border-radius: 20%;
+    opacity: 45%;
+}
+.p1:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.p1Desc{
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    height: 20px;
+    font-size: 13px;
+    color: snow;
+
+}
+.working{
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 250px;
+    left: 130px;
+}
+.title:nth-child(3){
+    font-size: 22px;
+    position: relative;
+    top: -30px;
+}
+.p2{
+    width: 100px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    border-radius: 20%;
+    opacity: 60%;
+}
+.p2:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.p2Desc{
+    position: absolute;
+    top: 188px;
+    width: 200px;
+    height: 20px;
+    font-size: 13px;
+    color: snow;
+    left: 15px;
+}
+.title:nth-child(4){
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+}
+.p3 {
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    border-radius: 20%;
+    opacity: 45%;
+}
+.p3:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.p3Desc{
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    height: 20px;
+    font-size: 13px;
+    color: snow;
+    left: 15px;
+}
+.p4{
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    border-radius: 20%;
+    opacity: 45%;
+}
+.p4:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.p4Desc{
+    position: absolute;
+    top: 193px;
+    width: 200px;
+    height: 20px;
+    font-size: 13px;
+    color: snow;
+    left: 15px;
+}
+.working4{
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 255px;
+    left: 130px;
+}
+.myAssLine{
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    background-color: yellow;
+    border: none;
+    top: 570px;
+    left:80px;
+    border-radius: 2px;
+    animation: float 3s ease-in-out infinite;
+}
+#myAssignments{
+    font-size: 40px;
+    position: absolute;
+    top: 550px;
+    left: 130px;
+    color: #00e7ff;
+    animation: float 3s ease-in-out infinite;
+}
+.assignmentDesc{
+    font-size: 16px;
+    width: 600px;
+    height: 50px;
+    letter-spacing: 1.6px;
+    position: absolute;
+    top: 600px;
+    left: 5%;
+}
+.myVideo{
+    position: relative;
+    top: 400px;
+    left: 58%;
+}
+
+.workingAss{
+    position: absolute;
+    top: 710px;
+    left: 420px;
+    color: cadetblue;
+    font-size: 24px;
+}
+/*GALLERY*/
+#gallery{
+    position: relative;
+    top: 400px;
+    opacity: 100%;
+    color: white;
+}
+/*.myGallery{*/
+/*    font-size: 42px;*/
+/*    position:absolute ;*/
+/*    color: #0D7377;*/
+/*    top: 30px;*/
+/*    left: 400px;*/
+/*}*/
+/*.galleyLine{*/
+/*    position: absolute;*/
+/*    width: 90px;*/
+/*    height: 5px;*/
+/*    background-color: red;*/
+/*    border: none;*/
+/*    top: 90px;*/
+/*    left: 450px;*/
+/*    box-shadow: 0 0 10px red, 0 0 20px red;*/
+/*    border-radius: 2px;*/
+/*}*/
 /*==========================================================FOOTER======================================================*/
 .footer {
     position: absolute;
@@ -1613,7 +1911,8 @@ b{
     padding: 150px 0;
     width: 2000px;
     height: 100px;
-    left: 0;
+    left: -30px;
+    top: 115%;
 }
 .footerDesc{
     position: absolute;
@@ -1622,12 +1921,12 @@ b{
     color: grey;
     font-size: 24px;
     margin-top: -130px;
-    left: 25%;
+    left: 18%;
 }
 .footer .social-icons {
     position: absolute;
     top: 75%;
-    left: 33%;
+    left: 25%;
     margin-bottom: 15px;
 }
 
@@ -1648,7 +1947,7 @@ b{
 
 .footer p {
     position: absolute;
-    left: 33%;
+    left: 25%;
     font-size: 14px;
     color: #ccc;
     margin: 0;
@@ -1681,7 +1980,7 @@ b{
     width: 100px;
     height: 100px;
     margin-top: -70px;
-    left: 37%;
+    left: 30%;
     color: grey;
     font-size: 20px;
 }
@@ -1691,7 +1990,7 @@ b{
     width: 100px;
     height: 100px;
     margin-top: -40px;
-    left: 36.5%;
+    left: 29.5%;
     color: grey;
     font-size: 18px;
 }
@@ -1701,7 +2000,7 @@ b{
     width: 100px;
     height: 100px;
     margin-top: 0;
-    left: 34%;
+    left: 27%;
     color: navy;
     font-size: 20px;
 }
@@ -1711,7 +2010,7 @@ b{
     width: 50px;
     height: 100px;
     margin-top: -80px;
-    left: 70%;
+    left: 57%;
     color: grey;
     font-size: 20px;
     word-spacing: 5px;
@@ -1740,11 +2039,12 @@ b{
 
 .footerLine{
     position: absolute;
-    width: 74%;
+    width: 59%;
     height: 2px;
     background-color: white;
     border: none;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    top: 210px;
     left: 20px;
     box-shadow: 0 0 10px white, 0 0 20px white;
     border-radius: 2px;
