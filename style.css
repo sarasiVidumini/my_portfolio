@@ -51,7 +51,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -379,7 +379,7 @@ header > img {
     height: 450px;
     border-radius: 20px;
     box-shadow: 0 0 10px #92DDC6;
-    top: -500px;
+    top: -460px;
     left: 38%;
 }
 
@@ -821,7 +821,7 @@ body {
     transform: translateX(-50%);
     /*display: flex;*/
     /*flex-direction: column;*/
-    font-size: 790px;
+    font-size: 800px;
     font-weight: bold;
     color: rgba(0, 139, 139, 0.2); /* faint cyan */
     filter: blur(4px);
@@ -1872,8 +1872,8 @@ position: absolute;
 
 .workingAss{
     position: absolute;
-    top: 710px;
-    left: 420px;
+    top: 730px;
+    left: 400px;
     color: cadetblue;
     font-size: 24px;
 }
@@ -1884,24 +1884,24 @@ position: absolute;
     opacity: 100%;
     color: white;
 }
-/*.myGallery{*/
-/*    font-size: 42px;*/
-/*    position:absolute ;*/
-/*    color: #0D7377;*/
-/*    top: 30px;*/
-/*    left: 400px;*/
-/*}*/
-/*.galleyLine{*/
-/*    position: absolute;*/
-/*    width: 90px;*/
-/*    height: 5px;*/
-/*    background-color: red;*/
-/*    border: none;*/
-/*    top: 90px;*/
-/*    left: 450px;*/
-/*    box-shadow: 0 0 10px red, 0 0 20px red;*/
-/*    border-radius: 2px;*/
-/*}*/
+.myGallery{
+    font-size: 42px;
+    position:absolute ;
+    color: #0D7377;
+    top: 30px;
+    left: 400px;
+}
+.galleyLine{
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background-color: red;
+    border: none;
+    top: 90px;
+    left: 450px;
+    box-shadow: 0 0 10px red, 0 0 20px red;
+    border-radius: 2px;
+}
 /*==========================================================FOOTER======================================================*/
 .footer {
     position: absolute;
