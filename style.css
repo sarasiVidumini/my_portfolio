@@ -1635,6 +1635,14 @@ strong{
     border-radius: 2px;
     animation: float 3s ease-in-out infinite;
 }
+.projectSecondPara{
+    position: absolute;
+    top: 138px;
+    font-size: 24px;
+    color: lime;
+    left: 150px;
+    animation: float 3s ease-in-out infinite;
+}
 #myProjects{
 position: absolute;
     color: #00e7ff;
@@ -1654,14 +1662,22 @@ position: absolute;
     border-radius: 2px;
 }
 .containerProjects {
-    overflow: auto;
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     width: 90%;
     position: absolute;
-    top: 150px;
+    top: 200px;
     margin: 0 auto;
     padding: 0 15px;
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.containerProjects::-webkit-scrollbar {
+    display: none;
 }
 
 .cardNew {
@@ -1675,6 +1691,7 @@ position: absolute;
     width: 250px;
     height: 280px;
     animation: float 3s ease-in-out infinite;
+    flex-direction: row;
 }
 
 .containerProjects:hover > :not(:hover) {
@@ -1902,6 +1919,67 @@ position: absolute;
     box-shadow: 0 0 10px red, 0 0 20px red;
     border-radius: 2px;
 }
+.wrapperG {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.inner {
+    --w: 100px;
+    --h: 150px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    --perspective: 1000px;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: perspective(var(--perspective));
+    animation: rotatingG 20s linear infinite; /* */
+}
+@keyframes rotatingG {
+    from {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(0);
+    }
+    to {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(1turn);
+    }
+}
+
+.cardG {
+    position: absolute;
+    border: 2px solid rgba(var(--color-card));
+    border-radius: 12px;
+    overflow: hidden;
+    inset: 0;
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
+
+.imgG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #0000
+    radial-gradient(
+            circle,
+            rgba(var(--color-card), 0.2) 0%,
+            rgba(var(--color-card), 0.6) 80%,
+            rgba(var(--color-card), 0.9) 100%
+    );
+}
+
 /*==========================================================FOOTER======================================================*/
 .footer {
     position: absolute;
