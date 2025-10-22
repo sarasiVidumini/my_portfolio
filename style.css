@@ -1882,6 +1882,14 @@ position: absolute;
     left: 5%;
 }
 
+.assSc{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    top: 460px;
+    left: 700px;
+    animation: float 3s ease-in-out infinite;
+}
 .workingAss{
     position: absolute;
     top: 730px;
@@ -1901,7 +1909,7 @@ position: absolute;
     position:absolute ;
     color: #0D7377;
     top: 30px;
-    left: 400px;
+    left: 500px;
 }
 .galleyLine{
     position: absolute;
@@ -1910,69 +1918,530 @@ position: absolute;
     background-color: red;
     border: none;
     top: 90px;
-    left: 450px;
+    left: 550px;
     box-shadow: 0 0 10px red, 0 0 20px red;
     border-radius: 2px;
 }
-.wrapperG {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-align: center;
+
+.all {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.inner {
-    --w: 100px;
-    --h: 150px;
-    --translateZ: calc((var(--w) + var(--h)) + 0px);
-    --rotateX: -15deg;
-    --perspective: 1000px;
-    position: absolute;
-    width: var(--w);
-    height: var(--h);
-    top: 25%;
-    left: calc(50% - (var(--w) / 2) - 2.5px);
-    z-index: 2;
+    gap: 30px;
     transform-style: preserve-3d;
-    transform: perspective(var(--perspective));
-    animation: rotatingG 20s linear infinite; /* */
-}
-@keyframes rotatingG {
-    from {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-        rotateY(0);
-    }
-    to {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-        rotateY(1turn);
-    }
+    perspective: 1000px;
+    animation: floatG 10s ease-in-out infinite;
+
 }
 
+/* Each image card */
 .cardG {
-    position: absolute;
-    border: 2px solid rgba(var(--color-card));
-    border-radius: 12px;
+    width: 220px;
+    height: 320px;
+    border-radius: 20px;
     overflow: hidden;
-    inset: 0;
-    transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-    translateZ(var(--translateZ));
+    background: #111;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 5px cyan;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    animation: float 3s ease-in-out infinite;
+    left: -20px;
+    top: 50px;
 }
 
-.imgG {
+/* Image itself */
+.cardG img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: #0000
-    radial-gradient(
-            circle,
-            rgba(var(--color-card), 0.2) 0%,
-            rgba(var(--color-card), 0.6) 80%,
-            rgba(var(--color-card), 0.9) 100%
-    );
+    transition: transform 0.6s ease, opacity 0.5s ease;
+}
+
+/* Hover zoom + rotate */
+.cardG:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.30);
+    box-shadow: 0 0 10px #00e7ff;
+}
+.cardG:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Floating / wave animation */
+@keyframes floatG {
+    0%, 100% {
+        transform: perspective(1000px) translateY(0);
+    }
+    50% {
+        transform: perspective(1000px) translateY(-15px);
+    }
+}
+
+/* Caption text */
+.text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+.cardG:hover .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glow pulse */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 15px #00e7ff;
+    }
+    50% {
+        box-shadow: 0 0 15px #00e7ff;
+    }
+}
+.cardG {
+    animation: glow 4s ease-in-out infinite;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .all {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cardG {
+        width: 180px;
+        height: 260px;
+    }
+}
+/*loader*/
+.loader {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: absolute;
+    --animation: 2s ease-in-out infinite;
+    top: 520px;
+    left: 500px;
+}
+
+.loader .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: solid 2px transparent;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: transparent;
+    animation: circle-keys var(--animation);
+}
+
+.loader .circle .dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    animation: dot-keys var(--animation);
+}
+
+.loader .circle .outline {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: outline-keys var(--animation);
+}
+
+.circle:nth-child(1) {
+    --color: #4285f4; /* Blue */
+    border-color: var(--color);
+}
+
+.circle:nth-child(1) .dot {
+    background-color: var(--color);
+}
+
+.circle:nth-child(2) {
+    --color: #ea4335; /* Red */
+    border-color: var(--color);
+    animation-delay: 0.3s;
+}
+
+.circle:nth-child(2) .dot {
+    background-color: var(--color);
+    animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+    --color: #fbbc05; /* Yellow */
+    border-color: var(--color);
+    animation-delay: 0.6s;
+}
+
+.circle:nth-child(3) .dot {
+    background-color: var(--color);
+    animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) {
+    --color: #34a853; /* Green */
+    border-color: var(--color);
+    animation-delay: 0.9s;
+}
+
+.circle:nth-child(4) .dot {
+    background-color: var(--color);
+    animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) {
+    --color: #4285f4; /* Blue (repeat for continuity) */
+    border-color: var(--color);
+    animation-delay: 1.2s;
+}
+
+.circle:nth-child(5) .dot {
+    background-color: var(--color);
+    animation-delay: 1.2s;
+}
+
+.circle:nth-child(1) .outline {
+    animation-delay: 0.9s;
+}
+
+.circle:nth-child(2) .outline {
+    animation-delay: 1.2s;
+}
+
+.circle:nth-child(3) .outline {
+    animation-delay: 1.5s;
+}
+
+.circle:nth-child(4) .outline {
+    animation-delay: 1.8s;
+}
+
+.circle:nth-child(5) .outline {
+    animation-delay: 2.1s;
+}
+
+@keyframes circle-keys {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes dot-keys {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes outline-keys {
+    0% {
+        transform: scale(0);
+        outline: solid 20px var(--color);
+        outline-offset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        outline: solid 0 transparent;
+        outline-offset: 20px;
+        opacity: 0;
+    }
+}
+
+/*CONTACT ME*/
+#contactMe{
+    top: 600px;
+    position: relative;
+}
+
+/* --- Root Variables for the component --- */
+.glitch-form-wrapper {
+    /*--bg-color: #0d0d0d;*/
+    --primary-color: #00f2ea;
+    --secondary-color: #a855f7;
+    --text-color: #e5e5e5;
+    --font-family: "Fira Code", Consolas, "Courier New", Courier, monospace;
+    --glitch-anim-duration: 0.5s;
+}
+
+.glitch-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    /*background-color: #050505;*/
+}
+
+/* --- Card Structure --- */
+.glitch-card {
+    /*background-color: var(--bg-color);*/
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid rgba(0, 242, 234, 0.2);
+    box-shadow:
+            0 0 20px rgba(0, 242, 234, 0.1),
+            inset 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 1rem;
+}
+.submit-btn{
+    justify-content: center;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5em 1em;
+    border-bottom: 1px solid rgba(0, 242, 234, 0.2);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card-title svg {
+    width: 1.2em;
+    height: 1.2em;
+    stroke: var(--primary-color);
+}
+
+.card-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-left: 5px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    position: absolute;
+    top: 0.75em;
+    left: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 242, 234, 0.3);
+    padding: 0.75em 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label {
+    top: -1.2em;
+    font-size: 0.8rem;
+    opacity: 1;
+}
+
+.form-group input:focus + .form-label::before,
+.form-group input:focus + .form-label::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: var(--bg-color);*/
+}
+
+.form-group input:focus + .form-label::before {
+    color: var(--secondary-color);
+    animation: glitch-anim var(--glitch-anim-duration)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.form-group input:focus + .form-label::after {
+    color: var(--primary-color);
+    animation: glitch-anim var(--glitch-anim-duration)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        transform: translate(-5px, 3px);
+        clip-path: inset(50% 0 20% 0);
+    }
+    40% {
+        transform: translate(3px, -2px);
+        clip-path: inset(20% 0 60% 0);
+    }
+    60% {
+        transform: translate(-4px, 2px);
+        clip-path: inset(80% 0 5% 0);
+    }
+    80% {
+        transform: translate(4px, -3px);
+        clip-path: inset(30% 0 45% 0);
+    }
+    100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* --- Button Styling --- */
+.submit-btn {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--primary-color);
+    /*color: var(--bg-color);*/
+    box-shadow: 0 0 25px var(--primary-color);
+    outline: none;
+}
+
+.submit-btn:active {
+    transform: scale(0.97);
+}
+
+/* --- Glitch Effect for Button --- */
+.submit-btn .btn-text {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover .btn-text {
+    opacity: 0;
+}
+
+.submit-btn::before,
+.submit-btn::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: var(--primary-color);
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover::before,
+.submit-btn:focus::before {
+    opacity: 1;
+    color: var(--secondary-color);
+    animation: glitch-anim var(--glitch-anim-duration)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.submit-btn:hover::after,
+.submit-btn:focus::after {
+    opacity: 1;
+    /*color: var(--bg-color);*/
+    animation: glitch-anim var(--glitch-anim-duration)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-group input:focus + .form-label::before,
+    .form-group input:focus + .form-label::after,
+    .submit-btn:hover::before,
+    .submit-btn:focus::before,
+    .submit-btn:hover::after,
+    .submit-btn:focus::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    .submit-btn:hover .btn-text {
+        opacity: 1;
+    }
 }
 
 /*==========================================================FOOTER======================================================*/
