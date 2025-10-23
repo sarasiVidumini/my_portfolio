@@ -2182,20 +2182,35 @@ position: absolute;
     }
 }
 
-/*CONTACT ME*/
+/*=============================================CONTACT ME=========================================*/
 #contactMe{
-    top: 600px;
+    top: 480px;
     position: relative;
 }
 
+.conPara{
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    font-size: 78px;
+    color: red;
+    width: 650px;
+    height: 20px;
+    gap: 10px;
+}
+
+/* --- Root Variables for the component --- */
 /* --- Root Variables for the component --- */
 .glitch-form-wrapper {
-    /*--bg-color: #0d0d0d;*/
+    --bg-color: #0d0d0d;
     --primary-color: #00f2ea;
     --secondary-color: #a855f7;
     --text-color: #e5e5e5;
     --font-family: "Fira Code", Consolas, "Courier New", Courier, monospace;
     --glitch-anim-duration: 0.5s;
+    position: absolute;
+    left: 60%;
+    top: 300px;
 }
 
 .glitch-form-wrapper {
@@ -2205,11 +2220,16 @@ position: absolute;
     font-family: var(--font-family);
     /*background-color: #050505;*/
 }
+.btn-text{
+    position: relative;
+    left: 10px;
+}
 
 /* --- Card Structure --- */
 .glitch-card {
-    /*background-color: var(--bg-color);*/
-    width: 100%;
+    background-color: var(--bg-color);
+    width: 500px;
+    height: 380px;
     max-width: 380px;
     border: 1px solid rgba(0, 242, 234, 0.2);
     box-shadow:
@@ -2218,9 +2238,7 @@ position: absolute;
     overflow: hidden;
     margin: 1rem;
 }
-.submit-btn{
-    justify-content: center;
-}
+
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -2311,7 +2329,7 @@ position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-color: var(--bg-color);*/
+    background-color: var(--bg-color);
 }
 
 .form-group input:focus + .form-label::before {
@@ -2372,11 +2390,10 @@ position: absolute;
     overflow: hidden;
 }
 
-
 .submit-btn:hover,
 .submit-btn:focus {
     background-color: var(--primary-color);
-    /*color: var(--bg-color);*/
+    color: var(--bg-color);
     box-shadow: 0 0 25px var(--primary-color);
     outline: none;
 }
@@ -2423,7 +2440,7 @@ position: absolute;
 .submit-btn:hover::after,
 .submit-btn:focus::after {
     opacity: 1;
-    /*color: var(--bg-color);*/
+    color: var(--bg-color);
     animation: glitch-anim var(--glitch-anim-duration)
     cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
 }
@@ -2443,7 +2460,245 @@ position: absolute;
         opacity: 1;
     }
 }
+/*contact intro*/
+.conContainer {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    aspect-ratio: 16/9;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+}
 
+
+.card-con-content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    grid-template-rows: 0.1fr 0.7fr 0.25fr;
+    background-color: #000; /* Changed to black */
+    width: 20em;
+    height: 20em;
+    aspect-ratio: 9/16;
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+}
+
+
+.card-con-content::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    background: linear-gradient(to bottom, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent), linear-gradient(to left, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent);
+    animation: rotate 5s infinite linear;
+}
+
+
+.con-title {
+    z-index: 80;
+    -webkit-clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    background: linear-gradient(90deg, rgba(255, 254, 250, 0) 0%, rgba(102, 224, 255, 0.3) 27%, rgba(102, 224, 255, 0.3) 63%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(102, 224, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 96%, rgba(102, 224, 255, 0.3) 100%);
+    width: 98%;
+    font-size: 1.2em;
+}
+
+.conTitle {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: hsl(192, 100%, 88%);
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+}
+
+.card-con-body {
+    padding-block: 1.5em;
+    padding-inline: 1em;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.contact-info {
+    text-decoration: none;
+    color: hsl(192, 100%, 88%);
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 224, 255, 0.2) 27%, rgba(102, 224, 255, 0.2) 63%, transparent 100%);
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.7em;
+    transition: 0.5s;
+}
+
+.contact-info:hover {
+    cursor: pointer;
+    color: hsl(192, 100%, 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 224, 255, 0.4) 27%, rgba(102, 224, 255, 0.4) 63%, transparent 100%);
+}
+
+.card-con-footer {
+    padding-inline: 1em;
+}
+
+@keyframes backglitch {
+    0% {
+        box-shadow: inset 0px 20px 30px 40px #000;
+    }
+
+    50% {
+        box-shadow: inset 0px -20px 30px 40px #000;
+    }
+
+    to {
+        box-shadow: inset 0px 20px 30px 40px #000;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate(-50%, 20%);
+    }
+
+    50% {
+        transform: rotate(180deg) translate(40%, 10%);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-50%, 20%);
+    }
+}
+
+.card-con-container {
+    /* Reduced drop-shadow opacity and blur */
+    filter: drop-shadow(20px 15px 10px rgba(64, 144, 181, 0.25))
+    drop-shadow(-25px -20px 10px rgba(158, 48, 169, 0.25));
+    animation: blinkShadowsFilter 8s ease-in infinite;
+}
+
+.card-con-content::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    background: repeating-linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(64, 144, 181, 0.2) 1px,
+            rgb(0, 0, 0) 3px,
+            rgba(64, 144, 181, 0.15) 5px,
+            #153544 4px,
+            transparent 0.5%
+    ),
+    repeating-linear-gradient(
+            to left,
+            #000 100%,
+            #000 100%
+    );
+    box-shadow: inset 0px 0px 15px 20px #000; /* Reduced from 30px 40px */
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    animation: backglitch 94ms linear infinite;
+}
+
+@keyframes blinkShadowsFilter {
+    0% {
+        filter: drop-shadow(20px 15px 10px rgba(64, 144, 181, 0.25))
+        drop-shadow(-25px -20px 10px #000);
+    }
+    5% {
+        filter: drop-shadow(25px 20px 15px rgba(64, 144, 181, 0.35))
+        drop-shadow(-25px 20px 15px #000);
+    }
+    to {
+        filter: drop-shadow(20px 15px 10px rgba(64, 144, 181, 0.25))
+        drop-shadow(-25px -20px 10px #000);
+    }
+}
+
+/*arrow*/
+.button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    gap: 4px;
+    position: relative;
+    top: 325px;
+    left: 430px;
+    animation: move 2s infinite ease;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(110px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.round {
+    width: 6px;
+    height: 6px;
+    background: rgb(47, 224, 255);
+    border-radius: 50%;
+}
+
+.line {
+    display: flex;
+    gap: 4px;
+}
+
+.two {
+    transform: translateX(10px);
+}
+
+.three {
+    transform: translateX(20px);
+}
+
+.four {
+    transform: translateX(30px);
+}
+
+.five {
+    transform: translateX(20px);
+}
+
+.six {
+    transform: translateX(10px);
+}
 /*==========================================================FOOTER======================================================*/
 .footer {
     position: absolute;

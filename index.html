@@ -371,16 +371,16 @@
             <a href="https://github.com/sarasiVidumini/cozyRobes" class="working"> < Get Code > </a>
         </div>
 
-<!--        <div class="cardNew">-->
-<!--            <p class="title">-->
-<!--                Technology Project-->
-<!--            </p>-->
-<!--            <img src="images/projectsPng/portfolio.jpg" class="p3">-->
-<!--            <p class="p3Desc">-->
-<!--                This project is developed using HTML and CSS  to design and build an interactive, user-friendly, and efficient web application.-->
-<!--            </p>-->
-<!--            <a href="https://github.com/sarasiVidumini/my_portfolio" class="working"> < Get Code > </a>-->
-<!--        </div>-->
+        <div class="cardNew">
+            <p class="title">
+                Technology Project
+            </p>
+            <img src="images/projectsPng/portfolio.jpg" class="p3">
+            <p class="p3Desc">
+                This project is developed using HTML and CSS  to design and build an interactive, user-friendly, and efficient web application.
+            </p>
+            <a href="https://github.com/sarasiVidumini/my_portfolio" class="working"> < Get Code > </a>
+        </div>
 
         <div class="cardNew">
             <p class="title">
@@ -479,84 +479,147 @@
 
 
 <section id="contactMe">
+    <div class="conPara">
+        <p>SEND MESSAGE FOR CONTACT ME....</p>
+    </div>
     <p class="conMe">Contact Me</p>
     <div class="glitch-form-wrapper">
-        <form class="glitch-card">
+        <form id="contactForm" class="glitch-card">
             <div class="card-header">
                 <div class="card-title">
-                    <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 24 24" stroke-width="1.5" stroke="darkcyan"
+                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                        <path
-                                d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-                        ></path>
-                        <path
-                                d="M12 11.5a3 3 0 0 0 -3 2.824v1.176a3 3 0 0 0 6 0v-1.176a3 3 0 0 0 -3 -2.824z"
-                        ></path>
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
                     </svg>
-                    <span>Contact_Me</span>
+                    <span>LEAVE-A-MESSAGE</span>
                 </div>
-
-                <div class="card-dots"><span></span><span></span><span></span></div>
             </div>
 
             <div class="card-body">
                 <div class="form-group">
-                    <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            required=""
-                            placeholder=""
-                    />
-                    <label for="username" class="form-label" data-text="USERNAME"
-                    >USERNAME</label
-                    >
+                    <input type="text" id="username" name="username" required placeholder="">
+                    <label for="username" class="form-label">USERNAME</label>
                 </div>
 
                 <div class="form-group">
-                    <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required=""
-                            placeholder=""
-                    />
-                    <label for="email" class="form-label" data-text="EMAIL_ADDRESS"
-                    >EMAIL_ADDRESS</label
-                    >
+                    <input type="email" id="email" name="email" required placeholder="">
+                    <label for="email" class="form-label">EMAIL_ADDRESS</label>
                 </div>
 
-                <!-- Message Field as regular input (like others) -->
                 <div class="form-group">
-                    <input
-                            type="text"
-                            id="message"
-                            name="message"
-                            required=""
-                            placeholder=""
-                    />
-                    <label for="message" class="form-label" data-text="ENCRYPTED_MESSAGE"
-                    >ENCRYPTED_MESSAGE</label
-                    >
+                    <input type="text" id="message" name="message" required placeholder="">
+                    <label for="message" class="form-label">ENCRYPTED_MESSAGE</label>
                 </div>
 
-                <button data-text="ONLINE_CONNECTION" type="submit" class="submit-btn">
-                    <span class="btn-text">ONLINE_CONNECTION</span>
-                </button>
+                <button data-text="ONLINE-CONNECTION" type="submit" class="submit-btn">SEND</button>
             </div>
         </form>
     </div>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("QT_ijumVeZMr66g0M");
+        })();
+
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_e04oese", "template_w9ch10c", this)
+                .then(() => {
+                    alert("✅ Message sent successfully!");
+                    this.reset();
+                })
+                .catch(() => {
+                    alert("❌ Failed to send message. Please try again.");
+                });
+        });
+    </script>
+
+    <button class="button">
+        <div class="line one">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+        <div class="line two">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+        <div class="line three">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+        <div class="line four">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+
+        <div class="line five">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+
+        <div class="line six">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+
+        <div class="line seven">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+
+        </div>
+    </button>
+
+
+    <div class="conContainer">
+        <div class="card-con-container">
+            <div class="card-con-content">
+                <div class="con-title">
+                    <span class="conTitle">CONTACT</span>
+                </div>
+                <div class="card-con-body">
+                    <div class="contact-info">
+                        <p>I'm always open to connecting! Whether you have questions, collaboration ideas, or just want to say hello, feel free to reach out.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>You can contact me via email, phone, or through my social media channels.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>I look forward to hearing from you!</p>
+                    </div>
+                </div>
+                <div class="card-con-footer">
+                    <span class="conTitle">Let's Connect!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <!-- HTML -->
