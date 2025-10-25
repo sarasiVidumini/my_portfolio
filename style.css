@@ -770,52 +770,6 @@ body {
     border-top: none;
 }
 
-/*.scroll-indicator {*/
-/*    position: absolute;*/
-/*    text-align: center;*/
-/*    color: #555;*/
-/*    top: -180px;*/
-/*    left: 85%;*/
-/*}*/
-
-/*@keyframes pulse {*/
-/*    0%, 100% {*/
-
-/*        transform: scale(1);*/
-/*        box-shadow: 0 0 10px lime, 0 0 10px lime;*/
-/*    }*/
-/*    50% {*/
-/*        transform: scale(1.2);*/
-/*        box-shadow: 0 0 10px lime, 0 0 10px lime;*/
-/*    }*/
-/*}*/
-
-/*.circle {*/
-/*    position: absolute;*/
-/*    width: 70px;*/
-/*    height: 70px;*/
-/*    border-radius: 30%;*/
-/*    box-shadow: 1px 1px 8px lime, 1px 1px 8px lime;*/
-/*    background-color: black;*/
-/*    top: 20px;*/
-/*    left: 75%;*/
-/*    animation: pulse 1.5s infinite;*/
-/*}*/
-
-
-/*.arrow {*/
-/*    position: absolute;*/
-/*    border-bottom: 8px solid #555;*/
-/*    border-right: 8px solid #555;*/
-/*    transform: rotate(45deg);*/
-/*    margin: 0 auto 10px;*/
-/*    width: 23px;*/
-/*    height: 23px;*/
-/*    top: 20px;*/
-/*    left: 23px;*/
-/*    animation-delay: 0.2s;*/
-/*}*/
-
 
          /*BACKGROUND TEXT*/
 .background-text {
@@ -1262,87 +1216,6 @@ div>button:nth-child(3)>span{
     font-weight: bold;
 }
 
-/*.follow {*/
-/*    font-size: 16px;*/
-/*    font-weight: 500;*/
-/*}*/
-
-/*.icons {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    gap: 20px;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*.tecList{*/
-/*    position: relative;*/
-/*    color: yellow;*/
-/*    font-size: 23px;*/
-
-/*}*/
-/*.cssIcon{*/
-/*    position: absolute;*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*    top: 40px;*/
-/*    left: -100px;*/
-/*}*/
-/*.fxIcon{*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    top: 70px;*/
-/*    left: -115px;*/
-/*}*/
-/*.hibernateIcon{*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    top: 100px;*/
-/*    left: -123px;*/
-/*}*/
-/*.htmlIcon{*/
-/*    position: absolute;*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*    top: 130px;*/
-/*    left: -100px;*/
-/*}*/
-/*.javaIcon{*/
-/*    position: absolute;*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*    top: 160px;*/
-/*    left: -100px;*/
-/*}*/
-/*.jsIcon{*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    top: 190px;*/
-/*    left: -120px;*/
-/*}*/
-/*.sqlIcon{*/
-/*    position: absolute;*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*    top: 220px;*/
-/*    left: -100px;*/
-/*}*/
-/*.postgresIcon{*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    top: 250px;*/
-/*    left: -118px;*/
-/*}*/
-/*.pythonIcon{*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    top: 280px;*/
-/*    left: -110px;*/
-/*}*/
 .programmer{
     position: absolute;
     top: 50px;
@@ -2045,11 +1918,11 @@ position: absolute;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 20px;
-    height: 20px;
-    border: solid 2px transparent;
+    width: 40px;
+    height: 40px;
+    border: solid 3px transparent;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 15px;
     background-color: transparent;
     animation: circle-keys var(--animation);
 }
@@ -2057,8 +1930,8 @@ position: absolute;
 .loader .circle .dot {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     animation: dot-keys var(--animation);
 }
@@ -2066,8 +1939,8 @@ position: absolute;
 .loader .circle .outline {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     animation: outline-keys var(--animation);
 }
@@ -2179,7 +2052,7 @@ position: absolute;
 @keyframes outline-keys {
     0% {
         transform: scale(0);
-        outline: solid 20px var(--color);
+        outline: solid 40px var(--color);
         outline-offset: 0;
         opacity: 1;
     }
@@ -2187,7 +2060,7 @@ position: absolute;
     100% {
         transform: scale(1);
         outline: solid 0 transparent;
-        outline-offset: 20px;
+        outline-offset: 40px;
         opacity: 0;
     }
 }
@@ -2209,8 +2082,7 @@ position: absolute;
     gap: 10px;
 }
 
-/* --- Root Variables for the component --- */
-/* --- Root Variables for the component --- */
+
 .glitch-form-wrapper {
     --bg-color: #0d0d0d;
     --primary-color: #00f2ea;
@@ -2728,12 +2600,12 @@ position: absolute;
     color: grey;
     font-size: 24px;
     margin-top: -130px;
-    left: 18%;
+    left: 23%;
 }
 .footer .social-icons {
     position: absolute;
     top: 75%;
-    left: 25%;
+    left: 32%;
     margin-bottom: 15px;
 }
 
@@ -2754,7 +2626,7 @@ position: absolute;
 
 .footer p {
     position: absolute;
-    left: 25%;
+    left: 33%;
     font-size: 14px;
     color: #ccc;
     margin: 0;
@@ -2787,7 +2659,7 @@ position: absolute;
     width: 100px;
     height: 100px;
     margin-top: -70px;
-    left: 30%;
+    left: 36%;
     color: grey;
     font-size: 20px;
 }
@@ -2797,7 +2669,7 @@ position: absolute;
     width: 100px;
     height: 100px;
     margin-top: -40px;
-    left: 29.5%;
+    left: 35.5%;
     color: grey;
     font-size: 18px;
 }
@@ -2807,7 +2679,7 @@ position: absolute;
     width: 100px;
     height: 100px;
     margin-top: 0;
-    left: 27%;
+    left: 33%;
     color: navy;
     font-size: 20px;
 }
@@ -2817,7 +2689,7 @@ position: absolute;
     width: 50px;
     height: 100px;
     margin-top: -80px;
-    left: 57%;
+    left: 70%;
     color: grey;
     font-size: 20px;
     word-spacing: 5px;
@@ -2846,7 +2718,7 @@ position: absolute;
 
 .footerLine{
     position: absolute;
-    width: 59%;
+    width: 74%;
     height: 2px;
     background-color: white;
     border: none;
