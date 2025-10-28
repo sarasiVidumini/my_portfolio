@@ -9,7 +9,7 @@
 
     /* Header */
     header > h1 {
-        font-size: 36px;
+        font-size: 45x;
         top: 20px;
         left: 10px;
     }
@@ -17,15 +17,16 @@
     header > img {
         width: 70px;
         height: 70px;
-        left: 1110px;
+        left: 1380px;
         top: 20px;
+        gap: 20px;
     }
 
     /* Navigation */
     nav ul {
-        left: 17%;
-        top: -68px;
-        word-spacing: 23.5px;
+        left: 20%;
+        top: -60px;
+        /*word-spacing: 20px;*/
     }
 
     nav ul li {
@@ -33,20 +34,20 @@
     }
 
     nav ul li a {
-        font-size: 23px;
+        font-size: 22px;
         left: 11%;
     }
 
     /* Home Section */
     .homeImage {
-        width: 300px;
-        height: 400px;
+        width: 375px;
+        height: 500px;
         top: -1217px;
         left: 50%;
     }
 
     .desc {
-        font-size: 24px;
+        font-size: 22px;
         width: 350px;
         top: -1080px;
         left: 55px;
@@ -79,41 +80,48 @@
     .instagramImg { left: 290px; }
 
     .me {
-        font-size: 36px;
-        top: -1150px;
-        left: 90%;
+        font-size: 40px;
+        position: absolute;
+        top: -1200px;
+        left: 1000px;
     }
 
     .homeLine2 {
         width: 18%;
         top: -1050px;
-        left: 95%;
+        left: 1000px;
     }
 
     .vision {
         font-size: 20px;
-        top: -1030px;
-        left: 95%;
+        top: -1015px;
+        left: 1000px;
         font-weight: bold;
-    }
-
-    .scroll-indicator{
         position: absolute;
-        top: -920px;
-        left: 100%;
+        width: 400px;
     }
 
+    .cyber-btn{
+        top: -900px;
+        width: 250px;
+        left: 900px;
+    }
+
+    .background-text{
+        left: 700px;
+    }
     /* About Section */
     #about {
         font-size: 28px;
-        top: -2000px;
+        top: -1950px;
     }
 
     #about>p:first-child{
         position: absolute;
-        font-size: 30px;
-        width: 300px;
-        left: 95%;
+        font-size: 40px;
+        width: 170px;
+        left: 1100px;
+        top: 10px;
 
     }
     #about>p:nth-child(2){
@@ -129,15 +137,15 @@
 
     #about>p>span{
         max-width: 800px;
-        left: 10%;
+        left: 15%;
         font-size: 27px;
     }
 
     .firstPhoto {
-        width: 300px;
-        height: 400px;
-        top: 5%;
-        left: 90%;
+        width: 375px;
+        height: 500px;
+        top: 10%;
+        left: 1000px;
     }
 
     .btn-container {
@@ -160,7 +168,8 @@
     /* Skills Section */
     #skills {
         font-size: 28px;
-        top: -2550px;
+        top: 1900px;
+        position: absolute;
     }
 
     .skillMainPara {
@@ -171,7 +180,7 @@
 
     .skillLine{
         top: 10%;
-        width: 15%;
+        width: 100px;
         left: 50%;
     }
 
@@ -186,6 +195,12 @@
         font-size: 65px;
     }
 
+    .typeSoft{
+        width: 200px;
+    }
+    .typeTec{
+        width: 300px;
+    }
     .square1 {
 
         width: 400px;
@@ -234,9 +249,102 @@
         width: 350px;
     }
 
+    .skillMainPara{
+        left: 100px;
+    }
+    .skillLine{
+        left: 150px;
+        top: 100px;
+    }
+    .mySkills{
+        top: 70px;
+    }
+    .card{
+        left: -60px;
+    }
+
+    /*service*/
+    #service{
+        top: 2900px;
+        position: absolute;
+    }
+    .serviceImg{
+        top: 330px;
+    }
+    .cards{
+        top: 250px;
+        width: 600px;
+        height: 600px;
+    }
+    .serviceMainPara{
+        top: 170px;
+    }
+    .serviceDesc{
+        top: 110px;
+        left: 500px;
+    }
+    /*projects*/
+    #projects{
+        top: 4000px;
+        position: absolute;
+    }
+    .projectMainPara{
+        width: 500px;
+        left: 400px;
+        top: -90px;
+    }
+    .projectLine{
+        top: 20px;
+    }
+    .projectSecondPara{
+        width: 400px;
+    }
+    .containerProjects{
+        width: 1190px;
+        position: absolute;
+        left: 130px;
+    }
+    /*gallery*/
+    #gallery{
+        top: 5100px;
+        position: absolute;
+
+    }
+
+    .cardG{
+        top: 100px;
+        width: 200px;
+        height: 325px;
+        left: 150px;
+        position: relative;
+        animation: floatG 10s ease-in-out infinite;
+    }
+    .loader{
+        top: 600px;
+        left: 600px;
+    }
+    /*contactMe*/
+  #contactMe{
+      position: absolute;
+      top: 5900px;
+  }
+  .conPara{
+      left: 450px;
+  }
+  .glitch-form-wrapper{
+      position: absolute;
+      top: 300px;
+      left: 800px;
+  }
+  .conContainer{
+      position: absolute;
+      top: 300px;
+      left: 10px;
+  }
     /* Footer */
     .footer {
-        width: 1238px;
+        top: 7000px;
+        width: 1530px;
         padding: 100px 10px;
         height: 300px;
     }
