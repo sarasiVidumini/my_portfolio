@@ -1,410 +1,209 @@
-/* ======================================== */
-/* iPad Air (portrait) 820x1180 media query */
-/* ======================================== */
-@media only screen and (min-width: 820px) and (max-width: 1180px) {
+/* ========================================
+   MOBILE RESPONSIVENESS (<= 1024px) - FIX
+======================================== */
 
-    body {
-        margin-left: 10px;
-    }
+@media (max-width: 1024px) {
 
-    /* Header */
-    header > h1 {
-        font-size: 45x;
-        top: 20px;
-        left: 10px;
-    }
+    .header {
 
-    header > img {
-        width: 70px;
-        height: 70px;
-        left: 1380px;
-        top: 20px;
-        gap: 20px;
-    }
-
-    /* Navigation */
-    nav ul {
-        left: 20%;
-        top: -60px;
-        /*word-spacing: 20px;*/
-    }
-
-    nav ul li {
-        left: 10%;
-    }
-
-    nav ul li a {
-        font-size: 22px;
-        left: 11%;
-    }
-
-    /* Home Section */
-    .homeImage {
-        width: 375px;
-        height: 500px;
-        top: -1217px;
-        left: 50%;
-    }
-
-    .desc {
-        font-size: 22px;
-        width: 350px;
-        top: -1080px;
-        left: 55px;
-    }
-
-    .homeLine1 {
-        width: 20%;
-        top: -1000px;
-        left: 55px;
-    }
-
-    .githubImg,
-    .telegramImg,
-    .whatsappImg,
-    .linkedInImg,
-    .contactImg,
-    .gmailImg,
-    .instagramImg {
-        width: 30px;
-        height: 30px;
-        top: -970px;
-    }
-
-    .githubImg { left: 50px; }
-    .telegramImg { left: 90px; }
-    .whatsappImg { left: 130px; }
-    .linkedInImg { left: 170px; }
-    .contactImg { left: 210px; }
-    .gmailImg { left: 250px; }
-    .instagramImg { left: 290px; }
-
-    .me {
-        font-size: 40px;
-        position: absolute;
-        top: -1200px;
-        left: 1000px;
-    }
-
-    .homeLine2 {
-        width: 18%;
-        top: -1050px;
-        left: 1000px;
-    }
-
-    .vision {
-        font-size: 20px;
-        top: -1015px;
-        left: 1000px;
-        font-weight: bold;
-        position: absolute;
-        width: 400px;
-    }
-
-    .cyber-btn{
-        top: -900px;
-        width: 250px;
-        left: 900px;
-    }
-
-    .background-text{
-        left: 700px;
-    }
-    /* About Section */
-    #about {
-        font-size: 28px;
-        top: -1950px;
-    }
-
-    #about>p:first-child{
-        position: absolute;
-        font-size: 40px;
-        width: 170px;
-        left: 1100px;
-        top: 10px;
-
-    }
-    #about>p:nth-child(2){
-        font-size: 40px;
-        width: 450px;
-        left: 5%;
-    }
-    #about>p:nth-child(3) {
-        font-size: 30px;
-        width: 500px;
-        left: 10%;
-    }
-
-    #about>p>span{
-        max-width: 800px;
-        left: 15%;
-        font-size: 27px;
-    }
-
-    .firstPhoto {
-        width: 375px;
-        height: 500px;
-        top: 10%;
-        left: 1000px;
-    }
-
-    .btn-container {
-        top: 400px;
-        left: 30%;
-        gap: 15px;
-    }
-
-    .btn {
-        width: 180px;
-        height: 60px;
-        font-size: 16px;
+        top: 0;
+        left: 0;
+        padding: 0.8rem 0;
+        width: 100%;
     }
 
 
-    .myCV{
-       top: 230px;
-    }
-
-    /* Skills Section */
-    #skills {
-        font-size: 28px;
-        top: 1900px;
-        position: absolute;
-    }
-
-    .skillMainPara {
-        font-size: 48px;
-        width: 350px;
-        left: 45%;
-    }
-
-    .skillLine{
-        top: 10%;
-        width: 100px;
-        left: 50%;
-    }
-
-    .circleHead {
-        width: 250px;
-        height: 250px;
-        top: 25%;
-        left: 49%;
-    }
-
-    .mySkills{
-        font-size: 65px;
-    }
-
-    .typeSoft{
-        width: 200px;
-    }
-    .typeTec{
-        width: 300px;
-    }
-    .square1 {
-
-        width: 400px;
-        height: 500px;
-        top: 15%;
-        left: 4%;
-
-    }
-    .square2 {
-
-        width: 400px;
-        height: 500px;
-        top: 15%;
-        left: 80%;
-    }
-
-    .s1{
-        left: 23%;
-        top: 35%;
-    }
-
-    .s2{
-        left: 15%;
-        top: 45%;
-    }
-    .s3{
-        left: 18%;
-        top: 55%;
-    }
-    .s4{
-        left: 22%;
-        top: 65%;
-    }
-    .s5{
-        left: 22%;
-        top: 75%;
-    }
-    .s6{
-        left: 19%;
-        top: 85%;
+    header {
+        padding: 0 1rem;
     }
 
 
-    #softSkills, #techSkills {
-        font-size: 28px;
-        width: 350px;
+    .menu-toggle {
+        display: block;
+        order: 2;
     }
 
-    .skillMainPara{
-        left: 100px;
-    }
-    .skillLine{
-        left: 150px;
-        top: 100px;
-    }
-    .mySkills{
-        top: 70px;
-    }
-    .card{
-        left: -60px;
+    header h1 {
+        order: 1;
+        flex-grow: 1;
+        text-align: left;
+        font-size: 1.5rem;
     }
 
-    /*service*/
-    #service{
-        top: 2900px;
-        position: absolute;
-    }
-    .serviceImg{
-        top: 330px;
-    }
-    .cards{
-        top: 250px;
-        width: 600px;
-        height: 600px;
-    }
-    .serviceMainPara{
-        top: 170px;
-    }
-    .serviceDesc{
-        top: 110px;
-        left: 500px;
-    }
-    /*projects*/
-    #projects{
-        top: 4000px;
-        position: absolute;
-    }
-    .projectMainPara{
-        width: 500px;
-        left: 400px;
-        top: -90px;
-    }
-    .projectLine{
-        top: 20px;
-    }
-    .projectSecondPara{
-        width: 400px;
-    }
-    .containerProjects{
-        width: 1190px;
-        position: absolute;
-        left: 130px;
-    }
-    /*gallery*/
-    #gallery{
-        top: 5100px;
-        position: absolute;
 
-    }
+    header img {
+        order: 3;
 
-    .cardG{
-        top: 100px;
-        width: 200px;
-        height: 325px;
-        left: 150px;
+        z-index: 1002;
         position: relative;
-        animation: floatG 10s ease-in-out infinite;
-    }
-    .loader{
-        top: 600px;
-        left: 600px;
-    }
-    /*contactMe*/
-  #contactMe{
-      position: absolute;
-      top: 5900px;
-  }
-  .conPara{
-      left: 450px;
-  }
-  .glitch-form-wrapper{
-      position: absolute;
-      top: 300px;
-      left: 800px;
-  }
-  .conContainer{
-      position: absolute;
-      top: 300px;
-      left: 10px;
-  }
-    /* Footer */
-    .footer {
-        top: 7000px;
-        width: 1530px;
-        padding: 100px 10px;
-        height: 300px;
     }
 
-    .footerDesc {
-        font-size: 30px;
-        width: 800px;
-        left: 20%;
-        top: 50%;
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.98);
+        border-top: 1px solid darkcyan;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-bottom: 20px;
+    }
+
+
+    .header.menu-open nav {
+        display: block;
+    }
+
+    /* --- 5. Dropdown/Link Styling --- */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li.dropdown {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 139, 139, 0.1);
+        display: block;
+    }
+
+    .dropdown-container {
+        width: 100%;
+    }
+
+    .dropdown-link {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+
+    .dropdown-menu-home, .dropdown-menu-about, .dropdown-menu-skills,
+    .dropdown-menu-services, .dropdown-menu-projects, .dropdown-menu-gallery,
+    .dropdown-menu-contactMe {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: rgba(0, 30, 30, 0.9);
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Mobile: Sub-link styling */
+    .dropdown-menu-home li a, .dropdown-menu-about li a, .dropdown-menu-skills li a,
+    .dropdown-menu-services li a, .dropdown-menu-projects li a, .dropdown-menu-gallery li a,
+    .dropdown-menu-contactMe li a {
+        padding: 0.8rem 2.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* The rest of your mobile styles (sections, cards, etc.) remain below this point... */
+
+    /* Skills: Ensure cards stack on mobile */
+    .container {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card-flip {
+        width: 90%;
+        height: 450px;
+    }
+
+    .cardG {
+        width: 100%;
+        height: 250px;
+    }
+
+    .glitch-form-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .glitch-card, .card-con-container {
+        width: 100%;
     }
 
     .footerLogo {
-        font-size: 36px;
-        left: 20px;
-        top: 55%;
-    }
-
-    .footer .social-icons {
-        top: 73%;
-        left: 40%;
-    }
-
-    .footerRight {
-        font-size: 16px;
-        top: 50%;
-        left: 95%;
-    }
-
-    .footerLine{
-        width:97% ;
-        top: 63%;
-
-    }
-
-    .footer p {
-        left: 40%;
-    }
-
-    .footerMail{
-        top:53% ;
-        left: 41.5%;
-        font-size: 24px;
-    }
-
-    .footerNumber{
-        left: 45%;
-        font-size: 24px;
-        top: 53%;
-    }
-
-    .footerCom{
-        font-size: 30px;
-        width: 200px;
-        left: 45%;
-        top: 48%;
-    }
-
-    .footerAddress{
-        left: 10px;
-        top: 60%;
+        font-size: 2rem;
     }
 }
+@media (max-width: 480px) {
+    .card {
+        height: 480px;
+    }
+
+    .card-top-para, .back > p {
+        font-size: 1.5rem;
+    }
+
+    .programmer, .softSkillIcon {
+        width: 130px;
+        height: 130px;
+    }
+
+    .tech-icons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .tech-icons img {
+        width: 44px;
+        height: 44px;
+    }
+}
+@media (max-width: 768px) {
+    .myGallery {
+        font-size: 2rem;
+    }
+
+    .cardG {
+        width: 250px;
+        height: 350px;
+    }
+
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .all {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
+    }
+
+    .cardG {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .myGallery {
+        font-size: 1.5rem;
+    }
+}
+
+
 
