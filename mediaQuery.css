@@ -39,7 +39,7 @@
 
 
     nav {
-        display:flex;
+        display:block;
         position: absolute;
         top: 100%;
         left: 0;
