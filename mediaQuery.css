@@ -3,7 +3,6 @@
 ======================================== */
 
 @media (max-width: 1024px) {
-
     .header {
         top: 0;
         left: 0;
@@ -11,14 +10,12 @@
         width: 100%;
     }
 
-
     header {
         padding: 0 1rem;
     }
 
-
     .menu-toggle {
-        display: none;
+        display: block;
         order: 2;
     }
 
@@ -29,7 +26,6 @@
         font-size: 1.5rem;
     }
 
-
     header img {
         order: 3;
 
@@ -37,9 +33,8 @@
         position: relative;
     }
 
-
     nav {
-        display:none;
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -50,7 +45,6 @@
         overflow-y: auto;
         padding-bottom: 20px;
     }
-
 
     .header.menu-open nav {
         display: block;
@@ -80,9 +74,12 @@
         text-align: left;
     }
 
-
-    .dropdown-menu-home, .dropdown-menu-about, .dropdown-menu-skills,
-    .dropdown-menu-services, .dropdown-menu-projects, .dropdown-menu-gallery,
+    .dropdown-menu-home,
+    .dropdown-menu-about,
+    .dropdown-menu-skills,
+    .dropdown-menu-services,
+    .dropdown-menu-projects,
+    .dropdown-menu-gallery,
     .dropdown-menu-contactMe {
         position: static;
         opacity: 1;
@@ -101,8 +98,12 @@
     }
 
     /* Mobile: Sub-link styling */
-    .dropdown-menu-home li a, .dropdown-menu-about li a, .dropdown-menu-skills li a,
-    .dropdown-menu-services li a, .dropdown-menu-projects li a, .dropdown-menu-gallery li a,
+    .dropdown-menu-home li a,
+    .dropdown-menu-about li a,
+    .dropdown-menu-skills li a,
+    .dropdown-menu-services li a,
+    .dropdown-menu-projects li a,
+    .dropdown-menu-gallery li a,
     .dropdown-menu-contactMe li a {
         padding: 0.8rem 2.5rem;
         font-size: 0.85rem;
@@ -131,7 +132,8 @@
         align-items: center;
     }
 
-    .glitch-card, .card-con-container {
+    .glitch-card,
+    .card-con-container {
         width: 100%;
     }
 
@@ -144,11 +146,13 @@
         height: 480px;
     }
 
-    .card-top-para, .back > p {
+    .card-top-para,
+    .back > p {
         font-size: 1.5rem;
     }
 
-    .programmer, .softSkillIcon {
+    .programmer,
+    .softSkillIcon {
         width: 130px;
         height: 130px;
     }
@@ -203,6 +207,3 @@
         font-size: 1.5rem;
     }
 }
-
-
-

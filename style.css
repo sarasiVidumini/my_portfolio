@@ -2,7 +2,7 @@
    GLOBAL STYLES & ANIMATIONS
 ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
     /* Main Text Color: Light Cyan/Teal */
     color: #e0f7fa;
     /* Primary Font */
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
@@ -37,21 +37,32 @@ body::-webkit-scrollbar-track {
 
 /* Digital Grid Background */
 body::before {
-    content: '';
+    content: "";
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     /* Grid color: Teal/Darkcyan subtle */
-    background:
-            linear-gradient(90deg, rgba(0, 139, 139, 0.03) 1px, transparent 1px),
-            linear-gradient(rgba(0, 139, 139, 0.03) 1px, transparent 1px);
+    background: linear-gradient(
+            90deg,
+            rgba(0, 139, 139, 0.03) 1px,
+            transparent 1px
+    ),
+    linear-gradient(rgba(0, 139, 139, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: -2;
     animation: gridPulse 8s infinite ease-in-out;
 }
 
 @keyframes gridPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* ========================================
@@ -63,7 +74,7 @@ body::before {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 7vw; /* Adjusted size */
     font-weight: 900;
     color: transparent;
@@ -73,9 +84,7 @@ body::before {
     letter-spacing: 0.1em;
     z-index: -1;
     pointer-events: none;
-    text-shadow:
-            0 0 20px rgba(0, 206, 209, 0.2),
-            0 0 40px rgba(0, 128, 128, 0.1);
+    text-shadow: 0 0 20px rgba(0, 206, 209, 0.2), 0 0 40px rgba(0, 128, 128, 0.1);
     animation: floatText 6s infinite ease-in-out;
     white-space: nowrap;
 }
@@ -86,16 +95,32 @@ body::before {
 }
 
 @keyframes floatText {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
 }
 
 @keyframes glitchText {
-    0%, 100% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(2px, -2px); }
-    60% { transform: translate(-1px, 1px); }
-    80% { transform: translate(1px, -1px); }
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        transform: translate(1px, -1px);
+    }
 }
 
 /* ========================================
@@ -106,7 +131,7 @@ body::before {
     /* Fixed positioning and background remain the same */
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(10px);
@@ -129,7 +154,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.7rem;
     color: darkcyan;
     text-shadow: 0 0 10px rgba(0, 206, 209, 0.6);
@@ -277,6 +302,60 @@ header img:hover {
 }
 
 /* ========================================
+   MENU TOGGLE (HAMBURGER)
+======================================== */
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    width: 30px;
+    height: 22px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0;
+    /* order property is in media query */
+}
+
+.menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: darkcyan;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hamburger "buns" */
+.menu-toggle span:nth-child(1) {
+    top: 0px;
+}
+.menu-toggle span:nth-child(2) {
+    top: 9px;
+}
+.menu-toggle span:nth-child(3) {
+    top: 18px;
+}
+
+/* "X" state when menu is open */
+.header.menu-open .menu-toggle span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+.header.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+    left: -30px;
+}
+.header.menu-open .menu-toggle span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+/* ========================================
    SECTIONS GENERAL
 ======================================== */
 
@@ -304,7 +383,7 @@ section p {
 .projectMainPara,
 .myGallery,
 .conMe {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 2.5rem;
     text-align: center;
     /* Gradient text effect */
@@ -316,7 +395,17 @@ section p {
 }
 
 /* Horizontal Rules - Animated Line */
-hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine, .projectLine, .myAssLine, .galleyLine, .footerLine {
+hr,
+.homeLine1,
+.homeLine2,
+.skillLine,
+.skillLine2,
+.skillLine3,
+.myProjectLine,
+.projectLine,
+.myAssLine,
+.galleyLine,
+.footerLine {
     border: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, darkcyan, transparent);
@@ -340,7 +429,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .desc {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.1rem;
     color: teal;
     letter-spacing: 2px;
@@ -359,7 +448,8 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 #home > span > img:hover {
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(140deg) drop-shadow(0 0 10px darkcyan);
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(140deg)
+    drop-shadow(0 0 10px darkcyan);
     transform: translateY(-5px) scale(1.1);
 }
 
@@ -374,8 +464,9 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     transition: 0.5s ease;
 }
 
-.me, .me2 {
-    font-family: 'Metal Mania', cursive;
+.me,
+.me2 {
+    font-family: "Metal Mania", cursive;
     font-size: 4rem;
     margin: 20px 0 5px;
     width: 300px;
@@ -406,7 +497,10 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     margin: 15px auto;
     text-align: center;
 }
-#about b { color: darkcyan; text-shadow: 0 0 5px darkcyan;}
+#about b {
+    color: darkcyan;
+    text-shadow: 0 0 5px darkcyan;
+}
 
 .firstPhoto {
     width: 400px;
@@ -426,12 +520,13 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     flex-wrap: wrap;
 }
 
-.btn, .myCV {
+.btn,
+.myCV {
     padding: 10px 20px;
     background: rgba(0, 139, 139, 0.1);
     border: 1px solid darkcyan;
     color: darkcyan;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
     cursor: pointer;
     transition: 0.3s;
@@ -440,7 +535,8 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     gap: 10px;
 }
 
-.btn:hover, .myCV:hover {
+.btn:hover,
+.myCV:hover {
     background: darkcyan;
     color: black;
     box-shadow: 0 0 15px darkcyan;
@@ -457,15 +553,16 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 ======================================== */
 
 .mySkills {
-    font-family: 'Metal Mania', cursive;
+    font-family: "Metal Mania", cursive;
     font-size: 2rem;
     color: teal;
     text-align: center;
     margin-top: 30px;
 }
 
-.typeTec, .typeSoft {
-    font-family: 'Orbitron', sans-serif;
+.typeTec,
+.typeSoft {
+    font-family: "Orbitron", sans-serif;
     font-size: 1.4rem;
     color: yellow;
     text-align: center;
@@ -506,7 +603,8 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 /* Front & Back Shared */
-.front, .back {
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -632,13 +730,18 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .orderBySkills span::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 206, 209, 0.3), transparent);
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 206, 209, 0.3),
+            transparent
+    );
     transition: left 0.7s;
 }
 
@@ -653,7 +756,6 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     color: #ffffff;
     border-color: #00ced1;
 }
-
 
 /* ========================================
    SERVICE SECTION SPECIFIC
@@ -710,7 +812,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 
 .quantity {
     display: block;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.1rem;
     color: darkcyan;
     margin: 5px 0;
@@ -725,8 +827,9 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
    PROJECTS SECTION SPECIFIC
 ======================================== */
 
-#myProjects, #myAssignments {
-    font-family: 'Orbitron', sans-serif;
+#myProjects,
+#myAssignments {
+    font-family: "Orbitron", sans-serif;
     font-size: 1.8rem;
     color: teal;
     text-align: center;
@@ -779,7 +882,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .cardNew .title {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.2rem;
     color: darkcyan;
     margin-bottom: 10px;
@@ -799,34 +902,37 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     margin-bottom: 15px;
 }
 
-.working, .working4 {
+.working,
+.working4 {
     display: inline-block;
     padding: 8px 15px;
     background: rgba(0, 139, 139, 0.2);
     border: 1px solid darkcyan;
     color: darkcyan;
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.8rem;
     transition: 0.3s;
     margin-top: 10px;
 }
 
-.workingAss{
-   position: absolute;
+.workingAss {
+    position: absolute;
     padding: 8px 15px;
     background: rgba(0, 139, 139, 0.2);
     border: 1px solid darkcyan;
     color: darkcyan;
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.8rem;
     transition: 0.3s;
     margin-top: 10px;
     left: 43%;
 }
 
-.working:hover, .working4:hover, .workingAss:hover {
+.working:hover,
+.working4:hover,
+.workingAss:hover {
     background: darkcyan;
     color: black;
     box-shadow: 0 0 10px darkcyan;
@@ -902,11 +1008,21 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     animation: float 2.5s ease-in-out infinite;
 }
 
-.cardG:nth-child(3) { animation-delay: 0.1s; }
-.cardG:nth-child(4) { animation-delay: 0.2s; }
-.cardG:nth-child(5) { animation-delay: 0.3s; }
-.cardG:nth-child(6) { animation-delay: 0.4s; }
-.cardG:nth-child(7) { animation-delay: 0.5s; }
+.cardG:nth-child(3) {
+    animation-delay: 0.1s;
+}
+.cardG:nth-child(4) {
+    animation-delay: 0.2s;
+}
+.cardG:nth-child(5) {
+    animation-delay: 0.3s;
+}
+.cardG:nth-child(6) {
+    animation-delay: 0.4s;
+}
+.cardG:nth-child(7) {
+    animation-delay: 0.5s;
+}
 
 .cardG:hover {
     transform: translateY(-15px) scale(1.05);
@@ -979,7 +1095,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .nav-arrow::before {
-    content: '';
+    content: "";
     width: 12px;
     height: 12px;
     border-top: 3px solid #764ba2;
@@ -1072,7 +1188,8 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 
 /* Animations */
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
     50% {
@@ -1122,7 +1239,8 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.3;
     }
@@ -1138,7 +1256,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 
 .conPara {
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: teal;
     margin-bottom: 10px;
 }
@@ -1157,7 +1275,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     padding: 30px;
     width: 400px;
     max-width: 100%;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 .card-header {
@@ -1218,7 +1336,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     background: darkcyan;
     color: black;
     border: 2px solid teal;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -1249,7 +1367,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .conTitle {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: darkcyan;
     font-size: 1.1rem;
 }
@@ -1272,7 +1390,13 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
     position: relative;
 }
 
-.footerDesc, .footerAddress, .footerNumber, .footerMail, .footerCom, .footerRight span, .footerp {
+.footerDesc,
+.footerAddress,
+.footerNumber,
+.footerMail,
+.footerCom,
+.footerRight span,
+.footerp {
     display: block;
     margin: 5px 0;
     font-size: 0.9rem;
@@ -1286,7 +1410,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .footerNumber {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.5rem;
     color: teal;
 }
@@ -1297,7 +1421,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 
 .footerLogo {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 3rem;
     color: darkcyan;
     text-shadow: 0 0 20px rgba(0, 206, 209, 0.6);
@@ -1325,7 +1449,7 @@ hr, .homeLine1, .homeLine2, .skillLine, .skillLine2, .skillLine3, .myProjectLine
 }
 .footerRight strong span {
     margin: 0 10px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: teal;
     font-size: 0.9rem;
 }
