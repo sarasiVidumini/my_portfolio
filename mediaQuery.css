@@ -17,6 +17,8 @@
     .menu-toggle {
         display: block;
         order: 2;
+        left: 70%;
+        position: absolute;
     }
 
     header h1 {
