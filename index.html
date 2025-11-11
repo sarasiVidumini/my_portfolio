@@ -537,15 +537,8 @@
         </div>
     </div>
 
-    <script>
-        /* Parallax effect on mouse movement */
+    <script src="js/galleryLoaders.js"></script>
 
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                document.querySelector(".loader").classList.add("hidden");
-            }, 1500);
-        });
-    </script>
 </section>
 
 <section id="contactMe">
@@ -624,27 +617,7 @@
     </div>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("QT_ijumVeZMr66g0M");
-        })();
-
-        document
-            .getElementById("contactForm")
-            .addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                emailjs
-                    .sendForm("service_e04oese", "template_w9ch10c", this)
-                    .then(() => {
-                        alert("✅ Message sent successfully!");
-                        this.reset();
-                    })
-                    .catch(() => {
-                        alert("❌ Failed to send message. Please try again.");
-                    });
-            });
-    </script>
+    <script src="js/emailJs.js"></script>
 
     <div class="conContainer">
         <div class="card-con-container">
@@ -741,19 +714,6 @@
     <p>© 2025 Sarasi Vidumini | All rights reserved</p>
 </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const header = document.querySelector(".header");
-
-        if (menuToggle && header) {
-            menuToggle.addEventListener("click", function () {
-                header.classList.toggle("menu-open");
-                const isExpanded = header.classList.contains("menu-open");
-                this.setAttribute("aria-expanded", isExpanded);
-            });
-        }
-    });
-</script>
+<script src="js/menuToggle.js"></script>
 </body>
 </html>
